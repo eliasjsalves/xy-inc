@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+	<display-name>xy-inc</display-name>
+
+	<context-param>
+		<param-name>resteasy.providers</param-name>
+		<param-value>org.elias.zup.exception.DefaultExceptionHandler</param-value>
+	</context-param>
+
+	<servlet>
+		<servlet-name>management-resteasy-servlet</servlet-name>
+		<servlet-class>org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher</servlet-class>
+		<init-param>
+			<param-name>resteasy.servlet.mapping.prefix</param-name>
+			<param-value>/management/*</param-value>
+		</init-param>
+		<init-param>
+			<param-name>resteasy.resources</param-name>
+			<param-value>org.elias.zup.api.ManagementApi</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet>
+		<servlet-name>data-resteasy-servlet</servlet-name>
+		<servlet-class>org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher</servlet-class>
+		<init-param>
+			<param-name>resteasy.servlet.mapping.prefix</param-name>
+			<param-value>/data/*</param-value>
+		</init-param>
+		<init-param>
+			<param-name>resteasy.resources</param-name>
+			<param-value>org.elias.zup.api.DataApi</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>management-resteasy-servlet</servlet-name>
+		<url-pattern>/management/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>data-resteasy-servlet</servlet-name>
+		<url-pattern>/data/*</url-pattern>
+	</servlet-mapping>
+
+
+<!-- 
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>management-resteasy-servlet</web-resource-name>
+			<url-pattern>/security</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>admin</role-name>
+			<role-name>user</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+	<login-config>
+		<auth-method>BASIC</auth-method>
+		<realm-name>Administer</realm-name>
+	</login-config>
+
+	<security-role>
+		<role-name>admin</role-name>
+	</security-role>
+	<security-role>
+		<role-name>user</role-name>
+	</security-role> -->
+	
+<!-- 	<servlet> -->
+<!-- 	  <servlet-name>OAuth</servlet-name> -->
+<!-- 	  <servlet-class>org.jboss.RESTEasy.auth.oauth.OAuthServlet</servlet-class> -->
+<!-- 	</servlet> -->
+	
+<!-- 	<servlet-mapping> -->
+<!-- 	  <servlet-name>OAuth</servlet-name> -->
+<!-- 	  <url-pattern>/oauth/*</url-pattern> -->
+<!-- 	</servlet-mapping> -->
+
+</web-app>
