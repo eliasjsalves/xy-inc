@@ -23,12 +23,10 @@ Ex:
 
 | Verbo | Recurso             | Descrição |
 | :---- |:--------------------|:--------- |
-| `POST`|`/management/venda`|cria o modelo venda |
+| `GET`|`/management`|lista todos os modelos e seus atributos |
 | `GET`|`/management/venda`|lista os atributos do modelo venda |
-
-POST /management/venda - cria o modelo 'venda'
-GET  /management/venda - lista os atributos do modelo 'venda'
-
+| `POST`|`/management/venda`|cria o modelo venda |
+| `DELETE`|`/management/venda`|remove o modelo venda |
 
 ### /data
 
@@ -36,8 +34,13 @@ Possui os recursos para criação, listagem, edição e remoção de entidades
 
 Ex:
 
-#### POST /data/venda - cria um objeto do tipo venda
-#### GET /data/venda/<id> - busca pelo objeto do tipo 'venda' e id especificado
+| Verbo | Recurso             | Descrição |
+| :---- |:--------------------|:--------- |
+| `GET`|`/data/venda`|lista todos os objetos do modelo venda |
+| `GET`|`/data/venda/{id}`|lista o objeto do modelo venda e id específico |
+| `POST`|`/data/venda/{id}`|cria um objeto do modelo venda |
+| `PUT`|`/data/venda/{id}`|edita um ou mais atributos de um objeto do modelo venda |
+| `DELETE`|`/data/venda/{id}`|remove um objeto do modelo venda e id especifico |
 
 ## Build
 
