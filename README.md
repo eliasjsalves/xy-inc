@@ -14,26 +14,24 @@ Como servidor de aplicação, optei pelo Wildfly 11, pois implementa a especific
 
 ## Recursos
 
-/management
+### /management
 
 Possui os recursos para a criação, listagem e remoção de modelos
 
 Ex: 
 
-POST /management/venda - cria o modelo 'venda'
+#### POST /management/venda - cria o modelo 'venda'
+#### GET  /management/venda - lista os atributos do modelo 'venda'
 
-GET  /management/venda - lista os atributos do modelo 'venda'
 
-
-/data
+### /data
 
 Possui os recursos para criação, listagem, edição e remoção de entidades
 
 Ex:
 
-POST /data/venda - cria um objeto do tipo venda
-
-GET /data/venda/<id> - busca pelo objeto do tipo 'venda' e id especificado
+#### POST /data/venda - cria um objeto do tipo venda
+#### GET /data/venda/<id> - busca pelo objeto do tipo 'venda' e id especificado
 
 ## Build
 
