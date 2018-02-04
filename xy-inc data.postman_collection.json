@@ -1,0 +1,138 @@
+{
+	"info": {
+		"name": "xy-inc data",
+		"_postman_id": "f0a69dce-833b-8eb4-c152-c326c981149f",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/data/estudante",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/data/estudante",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"data",
+						"estudante"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/data/estudante/1523a1d7-670c-43d2-8513-74bb576be3ff",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/data/estudante",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"data",
+						"estudante"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/data/estudante",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"nome\": \"Fulano da Silva\",\n        \"nascimento\": \"1988-07-30T12:00:00\",\n        \"matriculado\": false,\n        \"media\": 7.8\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/data/estudante",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"data",
+						"estudante"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/data/estudante/8ea3ccc7-cf30-4ad7-9f9a-e99dc21b2201",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Maria Leticia\",\n    \"matriculado\": true\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/data/estudante/8ea3ccc7-cf30-4ad7-9f9a-e99dc21b2201",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"data",
+						"estudante",
+						"8ea3ccc7-cf30-4ad7-9f9a-e99dc21b2201"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/data/estudante/f3571f77-b577-4de4-8a92-179edf1dc3d2",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/data/estudante/f3571f77-b577-4de4-8a92-179edf1dc3d2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"data",
+						"estudante",
+						"f3571f77-b577-4de4-8a92-179edf1dc3d2"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
