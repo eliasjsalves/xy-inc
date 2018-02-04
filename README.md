@@ -68,8 +68,8 @@ $ ./standalone.sh
 
 ## Testes
 
-Para os testes, foi criada uma classe com testes unitários (que são executados no momento do build) para testar a conexão com o MongoDb, e também estão anexos dois projetos do Postman com vários casos de uso dos recursos.
+Para os testes, foi criada uma classe simples com testes unitários (que são executados no momento do build) para testar a conexão com o MongoDb, e também estão anexos dois projetos do Postman com vários casos de uso dos recursos.
 
-Obs.: Os testes unitários apenas obtém exito se o banco estiver em execução. Para pular os testes, adicionar a opção `-Dmaven;test.skip=true` ao build.
+Obs.: Os testes unitários apenas obtém exito se o banco estiver em execução. Para pular os testes, adicionar a opção `-Dmaven.test.skip=true` ao build.
 
 
