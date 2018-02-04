@@ -18,10 +18,16 @@ Como servidor de aplicação, optei pelo Wildfly 11, pois implementa a especific
 
 Possui os recursos para a criação, listagem e remoção de modelos
 
-Ex: 
+Ex:
 
-#### POST /management/venda - cria o modelo 'venda'
-#### GET  /management/venda - lista os atributos do modelo 'venda'
+
+| Verbo | Recurso             | Descrição |
+| :---- |:--------------------|:--------- |
+| `POST`|`/management/venda`|cria o modelo venda |
+| `GET`|`/management/venda`|lista os atributos do modelo venda |
+
+POST /management/venda - cria o modelo 'venda'
+GET  /management/venda - lista os atributos do modelo 'venda'
 
 
 ### /data
